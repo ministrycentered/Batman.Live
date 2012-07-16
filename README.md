@@ -11,7 +11,7 @@ The Batman app.js.coffee gets a few lines that have your app key and channel the
   @on 'run', ->
     App.pusher = new Pusher("XXXXXXXXXXXXXXXXX")
     channel = App.pusher.subscribe('channel_name')
-    pusher = new Batmanpusher(org_channel)
+    pusher = new Batmanpusher(channel)
 ```
 
 On the backend we use Rails, so it was pretty easy to set up an observer that sends a message to Pusher in the format
